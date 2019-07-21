@@ -22,7 +22,7 @@ $(function() {
 function retrieveWeather(cityName, id) {
     $.ajax({
         type: "GET",
-        url: "http://api.openweathermap.org/data/2.5/forecast?&appid=7c7e9a1a2dc82d2cc06e211549f43a84&units=metric&id=" + id,
+        url: "https://api.openweathermap.org/data/2.5/forecast?&appid=7c7e9a1a2dc82d2cc06e211549f43a84&units=metric&id=" + id,
     }).done(function(data) {
 
         let city = $("#city" + cityName).find("tbody");

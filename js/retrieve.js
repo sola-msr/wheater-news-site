@@ -32,7 +32,7 @@ function retrieveWeather(cityName, id) {
             var textColor = imageColorOfWeather(data["list"][o]["weather"][0]["icon"]);
 
             city.append("<tr id='" + teid + "'></tr>");
-            city.find("#" + teid).append("<td class='list'>" + data["list"][o]["dt_txt"].slice(0, -3) + "</td>");
+            city.find("#" + teid).append("<td class='list'><p>" + data["list"][o]["dt_txt"].slice(0, -9) + "</p><p>" + data["list"][o]["dt_txt"].slice(11, -3) + "</p></td>");
             city.find("#" + teid).append("<td class='list color'><img src='https://openweathermap.org/img/wn/" + data["list"][o]["weather"][0]["icon"] + ".png'><br>" + data["list"][o]["weather"][0]["description"] + "</td>");
             city.find("#" + teid).append("<td class='list'>" + data["list"][o]["clouds"]["all"] + "%</td>");
             city.find("#" + teid).append("<td class='list'>" + data["list"][o]["main"]["temp"] + "%<br>（<span class='temp-min'>Min:" + data["list"][o]["main"]["temp_min"] + "%</span>　<span class='temp-max'>Max:" + data["list"][o]["main"]["temp_min"] + "%</span>）</td>");

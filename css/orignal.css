@@ -1,0 +1,57 @@
+.h1 .h2 p {
+    font-size: 2vw;
+    /* 画面幅が800pxの時に16px相当 */
+}
+
+.text br {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .text br {
+        display: inline;
+    }
+}
+
+.temp-min {
+    color: #0095d9;
+}
+
+.temp-max {
+    color: #e60033;
+}
+
+.city-name {
+    display: inline;
+}
+
+#datetime {
+    font-weight: bold;
+}
+
+.pagetop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.pagetop a {
+    display: block;
+    background-color: #ccc;
+    text-align: center;
+    color: #222;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 10px;
+}
+
+.pagetop a:hover {
+    display: block;
+    background-color: #222;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 10px;
+}

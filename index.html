@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <title>Weather in Japan【日本の天気】</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/orignal.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body id="Top">
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./js/retrieve.js"></script>
+    <script src="./js/moveTo.js"></script>
+
+    <div id="target" class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="mt-4 text">Weather in Japan<br>【日本の天気】</h1>
+                <p class="mt-4 mb-4 text">Current time【現在時刻】：<br><span id="datetime"></span></p>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a href="#" class="nav-link tab-cityTokyo active">Tokyo</a></li>
+                    <li class="nav-item hide"><a href="#" class="nav-link tab-cityYokohama">Yokohama</a></li>
+                    <li class="nav-item hide"><a href="#" class="nav-link tab-cityKyoto">Kyoto</a></li>
+                    <li class="nav-item hide"><a href="#" class="nav-link tab-cityOsaka">Osaka</a></li>
+                    <li class="nav-item hide"><a href="#" class="nav-link tab-citySapporo">Sapporo</a></li>
+                    <li class="nav-item hide"><a href="#" class="nav-link tab-cityNagoya">Nagoya</a></li>
+                </ul>
+
+                <div id="cityTokyo" class="col city city-show">
+                    <div class="city-name">
+                        <h2 class="mt-4 mb-4">Tokyo【東京】</h2>
+                    </div>
+                    <table class="table text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th scope="col">Weather</th>
+                                <th scope="col">Cloud Cover</th>
+                                <th scope="col">Temp</th>
+                                <th scope="col">Humidity</th>
+                                <th scope="col">Pressure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="cityYokohama" class="col city">
+                    <h2 class="mt-4 mb-4">Yokohama【横浜】</h2>
+                    <table class="table text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th scope="col">Weather</th>
+                                <th scope="col">Cloud Cover</th>
+                                <th scope="col">Temp</th>
+                                <th scope="col">Humidity</th>
+                                <th scope="col">Pressure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="cityKyoto" class="col city">
+                    <div class="city-name">
+                        <h2 class="mt-4 mb-4">Kyoto【京都】</h2>
+                    </div>
+                    <table class="table text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th scope="col">Weather</th>
+                                <th scope="col">Cloud Cover</th>
+                                <th scope="col">Temp</th>
+                                <th scope="col">Humidity</th>
+                                <th scope="col">Pressure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="cityOsaka" class="col city">
+                    <div class="city-name">
+                        <h2 class="mt-4 mb-4">Osaka【大阪】</h2>
+                    </div>
+                    <table class="table text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th scope="col">Weather</th>
+                                <th scope="col">Cloud Cover</th>
+                                <th scope="col">Temp</th>
+                                <th scope="col">Humidity</th>
+                                <th scope="col">Pressure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="citySapporo" class="col city">
+                    <div class="city-name">
+                        <h2 class="mt-4 mb-4">Sapporo【札幌】</h2>
+                    </div>
+                    <table class="table text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th scope="col">Weather</th>
+                                <th scope="col">Cloud Cover</th>
+                                <th scope="col">Temp</th>
+                                <th scope="col">Humidity</th>
+                                <th scope="col">Pressure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="cityNagoya" class="col city">
+                    <div class="city-name">
+                        <h2 class="mt-4 mb-4">Nagoya【名古屋】</h2>
+                    </div>
+                    <table class="table text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th scope="col">Weather</th>
+                                <th scope="col">Cloud Cover</th>
+                                <th scope="col">Temp</th>
+                                <th scope="col">Humidity</th>
+                                <th scope="col">Pressure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <a href="#target" class="js-trigger" data-mt-duration="300">Trigger</a> -->
+    <p class="pagetop" style="display: block; opacity: 0.80;"><a href="#Top">　▲　</a></p>
+
+    <script>
+        /* 現在時刻をリアルタイムで表示させる */
+        function showtime() {
+            var today = new Date();
+            var youbiArray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+            var monthArray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            month = today.getMonth();
+            $('#datetime').html(monthArray[month] + ", " + today.getDate() + "（" + youbiArray[today.getDay()] + "）" + today.getHours() + ":" + ('0' + today.getMinutes()).slice(-2) + ":" + ('0' + today.getSeconds()).slice(-2) + "");
+        }
+        setInterval(showtime, 500);
+
+        $(function() {
+            // 初期表示
+            $('.city').hide();
+            $('.city-show').show();
+
+            // tab click
+            $('.nav-link').click(function() {
+                $('.city').hide();
+                $('.nav-link').removeClass('active');
+                $(this).addClass('active');
+
+                // クリックされた順番のコンテンツのみを表示
+                var index = $('.nav-link').index(this);
+                $('.city').removeClass('city-show').eq(index).addClass('city-show');
+
+                $('.city-show').show();
+            });
+        });
+    </script>
+</body>
+
+</html>

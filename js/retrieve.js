@@ -28,9 +28,7 @@ function retrieveWeather(cityName, id) {
         let city = $("#city" + cityName).find("tbody");
 
         for (var o = 0; o < Object.keys(data["list"]).length; o++) {
-
             var teid = "list-" + data["city"]["name"] + "-" + o;
-
             var textColor = imageColorOfWeather(data["list"][o]["weather"][0]["icon"]);
 
             city.append("<tr id='" + teid + "'></tr>");
@@ -46,7 +44,6 @@ function retrieveWeather(cityName, id) {
             if (o === 2) {
                 $('#' + teid).css({ 'background-color': '#ffffe0', 'font-weight': 'bold', 'vertical-align': 'baselin' });
             }
-
         }
 
     }).fail(function(data) {
@@ -59,42 +56,50 @@ function retrieveWeather(cityName, id) {
  * 
  * @param sting iconParam 
  * @return string カラーコード
+ * @link https://openweathermap.org/weather-conditions
  */
 function imageColorOfWeather(iconParam) {
-
-    // 
+    // clear sky
     if (iconParam === "01d" || iconParam === "01n") {
         return "#ff0000";
     }
 
+    // few clouds
     if (iconParam === "02d" || iconParam === "02n") {
         return "#ff7f00";
     }
 
+    // scattered clouds
     if (iconParam === "03d" || iconParam === "03n") {
         return "#606060";
     }
 
+    // broken clouds
     if (iconParam === "04d" || iconParam === "04n") {
         return "#606060";
     }
 
+    // shower rain
     if (iconParam === "09d" || iconParam === "09n") {
         return "#007fff";
     }
 
+    // rain
     if (iconParam === "10d" || iconParam === "10n") {
         return "#0000ff";
     }
 
+    // thunderstorm
     if (iconParam === "11d" || iconParam === "11n") {
         return "#ffff7f";
     }
 
+    // snow
     if (iconParam === "13d" || iconParam === "13n") {
         return "#00ffff";
     }
 
+    // mist
     if (iconParam === "50d" || iconParam === "50n") {
         return "#f6f6f6";
     }
